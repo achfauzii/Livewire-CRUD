@@ -1,4 +1,11 @@
 <div>
+    <div wire:poll.6000ms class="text-center">
+        @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+        @endif
+    </div>
     <a href="{{ route('post.create') }}" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
     <table class="table table-bordered">
         <thead class="thead-dark">
