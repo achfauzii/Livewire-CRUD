@@ -76,6 +76,7 @@ class User extends Component
         $this->email = $user->email;
         $this->password = $user->password;
     }
+    
     public function render()
     {
         $this->user = TableUser::orderBy('id', 'DESC')->get();
